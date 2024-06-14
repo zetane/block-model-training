@@ -1,0 +1,50 @@
+{
+  "information": {
+    "id": "housingmodel",
+    "name": "Housing Model",
+    "description": "Template block for custom computations.",
+    "system_versions": [
+      "0.1"
+    ],
+    "block_version": "block version number",
+    "block_source": "core/blocks/housingmodel",
+    "block_type": "compute"
+  },
+  "inputs": {
+    "epoch": {
+      "type": "int",
+      "connections": [],
+      "relays": []
+    }
+  },
+  "outputs": {
+    "avg_loss": {
+      "type": "Any",
+      "connections": [],
+      "relays": []
+    }
+  },
+  "action": {
+    "container": {
+      "image": "housingmodel",
+      "version": "latest",
+      "command_line": [
+        "python",
+        "entrypoint.py"
+      ]
+    }
+  },
+  "views": {
+    "node": {
+      "behavior": "modal",
+      "active": "True or False",
+      "title_bar": {},
+      "preview": {},
+      "html": "",
+      "pos_x": "300",
+      "pos_y": "200",
+      "pos_z": "999"
+    }
+  },
+  "events": {}
+}
